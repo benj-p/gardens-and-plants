@@ -11,3 +11,11 @@
     </div>
   <% end %>
 </div>
+
+<div class="container">
+  <%= simple_form_for [@garden, @plant] do |f| %>
+    <%= f.input :name, placeholder: "Palm tree" %>
+    <%= f.input :image_url %>
+    <%= f.submit "Add plant", class: "btn btn-primary" %>
+  <% end %>
+</div>

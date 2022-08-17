@@ -1,7 +1,6 @@
 class Garden < ApplicationRecord
-  # name is present
-  # name is unique
+  has_many :plants, dependent: :destroy
+  
   validates :name, presence: true, uniqueness: true
-  # banner_url is present
   validates :banner_url, presence: true
 end
